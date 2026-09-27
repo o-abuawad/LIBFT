@@ -6,7 +6,7 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 13:52:28 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/24 14:17:03 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/27 14:18:44 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,15 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 		i++;
-	while (s[i] != (char)c)
+	while (s[i] != (char)c && i > 0)
 		i--;
-	return ((char *)&s[i]);
+	if (s[i] != (char)c)
+		return (NULL);
+	return ((char *) s + i);
 }
 // int main()
 // {
 // 	char str[] = "HelloWorld";
 // 	// printf("%s\n", strrchr(str,'l'));
-// 	printf("%s", ft_strrchr(str,'k'));
+// 	printf("%s", ft_strrchr(str,'L'));
 // }

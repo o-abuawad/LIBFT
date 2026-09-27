@@ -6,7 +6,7 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 12:44:56 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/26 14:12:15 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/27 13:17:03 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 255)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);
 }
-// #include <stdio.h>
-// int main()
-// {
-// 	printf("%d\n%d\n", ft_isascii('a'), isascii('a'));
-// }
+/* int main() { printf("%d\n%d\n", ft_isascii(128), isascii(128)); } */
