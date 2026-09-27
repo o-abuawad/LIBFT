@@ -6,7 +6,7 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 04:53:17 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/26 14:54:09 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/27 18:56:19 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ void	*ft_calloc(size_t n, size_t size)
 	return (ptr);
 }
 
-// int main() {
+// int main()
+// {
 //     int n = 5;
 //     int *arr;
 //
