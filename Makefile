@@ -1,31 +1,25 @@
 NAME = libft.a
+
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-# Define the final executable name
-TARGET = program
+SRCE = $(wildcard ft_*.c)
+OBJ = $(SRCE:.c=.o)
 
-# Define the source and object files
-SRCS = $(wildcard ft_*.c) main.c
-OBJS = $(SRCS:.c=.o)
+all: $(NAME)
 
-.PHONY: all clean fclean re
+$(TARGET): $(OBJ)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJ)
 
-# 1. The 'all' target builds the test executable
-all: $(TARGET)
-
-# 2. Rule to build the executable from object files
-$(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
-
-# 3. Pattern rule to compile .c files into .o files
-%.o: %.c
-	$(CC) $(CFLAGS) -I. -c $< -o $@
+%.o: %.C
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) test_runner
-
+	rm -f $(OBJ) $(TARGET)
 fclean: clean
-	rm -f $(TARGET)
-
+	rm -f $(NAME)
 re: fclean all
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
+
+.PHONY: all clean fclean re
