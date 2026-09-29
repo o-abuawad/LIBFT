@@ -6,7 +6,7 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 15:49:22 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/29 16:59:50 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/29 17:02:45 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static long	counter(long n)
 	return (i);
 }
 
-static long	checker(char *ptr, int l, long n)
+static void	checker(char *ptr, int l, long n)
 {
 	if (n < 0)
 	{
@@ -45,7 +45,6 @@ static long	checker(char *ptr, int l, long n)
 		ptr[l] = (n % 10) + '0';
 		n /= 10;
 	}
-	return (n);
 }
 
 char	*ft_itoa(int n)
