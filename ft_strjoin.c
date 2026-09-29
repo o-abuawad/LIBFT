@@ -6,44 +6,51 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 09:13:50 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/29 10:52:27 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/29 11:12:45 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static char	*counter(char const *str1, char const *str2, char *ptr)
+{
+	int	i1;
+	int	j1;
+
+	i1 = 0;
+	j1 = 0;
+	while (str1[i1])
+	{
+		ptr[i1] = str1[j1];
+		i1++;
+		j1++;
+	}
+	j1 = 0;
+	while (str2[j1])
+	{
+		ptr[i1] = str2[j1];
+		i1++;
+		j1++;
+	}
+	ptr[i1] = '\0';
+	return (ptr);
+}
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*n;
-	int		i;
-	int		j;
+	size_t	total_len;
 
-	i = 0;
-	j = 0;
 	if (!s1 && !s2)
 		return (NULL);
-	n = malloc(1);
+	total_len = ft_strlen((char *)s1) + ft_strlen((char *)s2);
+	n = malloc(total_len + 1);
 	if (!n)
 		return (NULL);
-	n[0] = '\0';
-	while (s1[i])
-	{
-		n[i] = s1[j];
-		i++;
-		j++;
-	}
-	j = 0;
-	while (s2[j])
-	{
-		n[i] = s2[j];
-		i++;
-		j++;
-	}
-	n[i] = '\0';
-	return (n);
+	return (counter(s1, s2, n));
 }
 
-// int	main()
+// int	main(void)
 // {
 // 	char	*c;
 //
