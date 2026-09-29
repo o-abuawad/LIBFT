@@ -6,7 +6,7 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 15:49:22 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/29 16:59:30 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/29 16:59:50 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,17 +65,6 @@ char	*ft_itoa(int n)
 		str[0] = '0';
 		return (str);
 	}
-	// if (num < 0)
-	// {
-	// 	str[0] = '-';
-	// 	num = -num;
-	// }
-	// while (num > 0)
-	// {
-	// 	len--;
-	// 	str[len] = (num % 10) + '0';
-	// 	num /= 10;
-	// }
 	checker(str, len, num);
 	return (str);
 }
