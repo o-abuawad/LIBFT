@@ -6,34 +6,46 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 15:49:22 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/29 16:37:09 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/29 16:59:30 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	counter(int n)
+static long	counter(long n)
 {
 	long	i;
-	bool	c;
 
 	i = 0;
-	c = false;
 	if (n == 0)
 		return (1);
 	if (n < 0)
 	{
+		i++;
 		n *= -1;
-		c = true;
 	}
 	while (n > 0)
 	{
 		n /= 10;
 		i++;
 	}
-	if (c == true)
-		return (i + 1);
 	return (i);
+}
+
+static long	checker(char *ptr, int l, long n)
+{
+	if (n < 0)
+	{
+		ptr[0] = '-';
+		n = -n;
+	}
+	while (n > 0)
+	{
+		l--;
+		ptr[l] = (n % 10) + '0';
+		n /= 10;
+	}
+	return (n);
 }
 
 char	*ft_itoa(int n)
@@ -44,28 +56,34 @@ char	*ft_itoa(int n)
 
 	len = counter(n);
 	num = n;
-	if (num == 0)
-		str = "0";
-	str = malloc(len + 1);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
 	str[len] = '\0';
-	if (num < 0)
+	if (num == 0)
 	{
-		str[0] = '-';
-		num = -num;
+		str[0] = '0';
+		return (str);
 	}
-	while (num > 0)
-	{
-		len--;
-		str[len] = (num % 10) + '0';
-		num /= 10;
-	}
+	// if (num < 0)
+	// {
+	// 	str[0] = '-';
+	// 	num = -num;
+	// }
+	// while (num > 0)
+	// {
+	// 	len--;
+	// 	str[len] = (num % 10) + '0';
+	// 	num /= 10;
+	// }
+	checker(str, len, num);
 	return (str);
 }
 
-int	main(void)
-{
-	char	*c;
-
-	c = ft_itoa(48);
-	printf("%s\n", c);
-}
+// int	main(void)
+// {
+// 	char	*c;
+//
+// 	c = ft_itoa(-13214881);
+// 	printf("%s\n", c);
+// }
