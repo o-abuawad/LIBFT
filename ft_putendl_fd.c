@@ -6,7 +6,7 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 11:46:49 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/29 11:48:19 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/29 12:16:46 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
-		return (0);
+		return ;
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }

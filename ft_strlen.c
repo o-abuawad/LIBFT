@@ -6,24 +6,24 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 12:02:08 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/21 12:28:23 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/29 12:14:20 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (str[i])
+	while (s[i])
 		i++;
 	return (i);
 }
-// #include <stdio.h>
-// int main()
+
+// int	main(void)
 // {
-// 	char str[] = "this_is_a_text";
-// 	printf("%d", ft_strlen(str));
+// 	printf("%zu\n", ft_strlen("this is a test"));
+// 	return (0);
 // }

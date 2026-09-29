@@ -6,7 +6,7 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 11:46:32 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/29 11:47:47 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/29 12:17:09 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	size_t	i;
 
 	if (!s)
-		return (0);
+		return ;
 	i = 0;
 	while (s[i])
 	{

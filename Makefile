@@ -3,23 +3,23 @@ NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRCE = $(wildcard ft_*.c)
-OBJ = $(SRCE:.c=.o)
+SRCS = $(wildcard ft_*.c)
+OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(TARGET): $(OBJ)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJ)
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
-%.o: %.C
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ) $(TARGET)
+	rm -f $(OBJS)
+
 fclean: clean
 	rm -f $(NAME)
+
 re: fclean all
-$(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
 
 .PHONY: all clean fclean re
