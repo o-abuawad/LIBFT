@@ -6,7 +6,7 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 09:13:50 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/28 09:54:41 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/29 10:52:27 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	n[i] = '\0';
 	return (n);
 }
+
 // int	main()
 // {
 // 	char	*c;
