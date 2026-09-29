@@ -6,7 +6,7 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 09:40:15 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/29 11:23:31 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/29 11:36:22 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	while (s1[start] && is_in_set(s1[start], set))
 		start++;
-	end = 0;
-	while (s1[end])
-		end++;
+	end = ft_strlen((char *)s1);
 	while (end > start && is_in_set(s1[end - 1], set))
 		end--;
 	trimmed = malloc(end - start + 1);

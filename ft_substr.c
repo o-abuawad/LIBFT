@@ -6,7 +6,7 @@
 /*   By: ealshama <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 07:54:24 by ealshama          #+#    #+#             */
-/*   Updated: 2026/09/29 10:51:12 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/29 11:31:48 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s_len = ft_strlen((char *)s);
 	if (start >= s_len)
 		return (getptr());
-	if (len >= s_len - start)
+	if (len > s_len - start)
 		len = s_len - start;
 	ptr = malloc(len + 1);
 	if (!ptr)

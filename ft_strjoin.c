@@ -6,7 +6,7 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 09:13:50 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/29 11:12:45 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/29 11:30:43 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,10 @@ static char	*counter(char const *str1, char const *str2, char *ptr)
 	int	j1;
 
 	i1 = 0;
-	j1 = 0;
 	while (str1[i1])
 	{
-		ptr[i1] = str1[j1];
+		ptr[i1] = str1[i1];
 		i1++;
-		j1++;
 	}
 	j1 = 0;
 	while (str2[j1])
@@ -41,7 +39,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*n;
 	size_t	total_len;
 
-	if (!s1 && !s2)
+	if (!s1 || !s2)
 		return (NULL);
 	total_len = ft_strlen((char *)s1) + ft_strlen((char *)s2);
 	n = malloc(total_len + 1);
