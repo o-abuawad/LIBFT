@@ -6,7 +6,7 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 10:07:44 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/30 10:09:33 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/30 13:02:01 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
 }

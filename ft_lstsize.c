@@ -6,7 +6,7 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 09:49:26 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/30 10:09:18 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/30 13:36:16 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ unsigned int	ft_lstsize(t_list *lst)
 {
 	int	i;
 
+	if (!lst)
+		return ;
 	i = 0;
 	while (lst)
 	{

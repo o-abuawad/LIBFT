@@ -6,7 +6,7 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 10:05:51 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/30 10:08:43 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/30 13:04:09 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
+	if (!lst || !new)
+		return ;
 	new->next = *lst;
 }
