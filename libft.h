@@ -6,7 +6,7 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 04:29:08 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/29 12:25:13 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/09/30 09:10:48 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@
 # include <stdio.h>
 # include <ctype.h>
 # include <unistd.h>
+
+typedef	srtuct  s_list
+{
+	void	*content;
+	struct	*next;
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
