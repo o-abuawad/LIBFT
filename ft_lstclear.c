@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*currnet;
@@ -25,4 +27,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		free(currnet);
 		currnet = nnext;
 	}
+	*lst = NULL;
 }

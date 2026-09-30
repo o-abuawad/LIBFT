@@ -30,7 +30,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_len;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	s_len = ft_strlen((char *)s);
 	if (start >= s_len)
 		return (getptr());

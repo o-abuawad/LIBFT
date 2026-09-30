@@ -10,13 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*currnet;
 
 	if (!lst || !f)
 		return ;
-	currnet = *lst;
+	currnet = lst;
 	while (currnet)
 	{
 		f(currnet->content);

@@ -14,10 +14,10 @@
 
 unsigned int	ft_lstsize(t_list *lst)
 {
-	int	i;
+	unsigned int	i;
 
 	if (!lst)
-		return ;
+		return (0);
 	i = 0;
 	while (lst)
 	{
