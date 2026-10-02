@@ -6,7 +6,7 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 14:15:38 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/10/02 10:11:21 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/10/02 10:11:23 by oabu-awa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_atoi(const char *nptr)
 	return ((int)(result * sign));
 }
 
-int	main(void)
+// int	main(void)
 // {
 // 	printf("%d\n%d\n", ft_atoi("+-123"), atoi("+-123"));
 // }
