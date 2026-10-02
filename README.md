@@ -1,91 +1,135 @@
 *This project has been created as part of the 42 curriculum by oabu-awa.*
 
-# Libft - Your Very First Own Library
+# Libft - My Very First Own Library
 
 ## Description
 
-The **Libft** project is the very first project in the 42 curriculum. The goal of this project is to create a custom C standard library containing reimplementations of standard C library functions (`libc`), as well as additional utility functions for string manipulation, memory management, and linked list operations.
+Libft is the first project of the 42 curriculum. The goal is to create my own C library by reimplementing functions from the standard C library and writing additional functions that will be useful in future projects.
 
-Building this library allows us to understand the inner workings of fundamental algorithms, master memory allocation and pointer arithmetic in C, and establish a foundational toolbox that will be reused and extended throughout future 42 projects.
+This project helped me understand how common C functions work internally, especially string manipulation, memory management, pointers, and dynamic allocation. It also gives me a library that I can reuse throughout the 42 curriculum.
+
+The library is compiled into a static library called `libft.a`.
+
+The project is divided into 3 parts:
+
+* **Part 1:** Reimplementing functions from the C standard library.
+* **Part 2:** Additional functions for strings, memory, conversions, and file descriptors.
+* **Part 3:** Functions for working with singly linked lists.
 
 ---
 
-## Library Overview & Detailed Description
+## Library Overview
 
-The library compiles into a static archive named `libft.a` and is divided into three main components:
+### Part 1 - Libc Functions
 
-### 1. Part 1 - Libc Reimplementations
+The first part consists of reimplementing several functions from the standard C library. All functions are prefixed with `ft_` and must behave like their original versions.
 
-Standard functions reimplemented strictly adhering to their standard `man` specifications (prefixed with `ft_`):
+### Character checks and conversion
 
-* **Character checks & conversion**:
-  * `ft_isalpha`: Checks for an alphabetic character.
-  * `ft_isdigit`: Checks for a digit (`0` through `9`).
-  * `ft_isalnum`: Checks for an alphanumeric character.
-  * `ft_isascii`: Checks whether a character fits into the ASCII character set.
-  * `ft_isprint`: Checks for any printable character including space.
-  * `ft_toupper`: Converts a lowercase letter to uppercase.
-  * `ft_tolower`: Converts an uppercase letter to lowercase.
+| Function     | Description                                               |
+| ------------ | --------------------------------------------------------- |
+| `ft_isalpha` | Checks if a character is alphabetic.                      |
+| `ft_isdigit` | Checks if a character is a digit (`0` to `9`).            |
+| `ft_isalnum` | Checks if a character is alphanumeric.                    |
+| `ft_isascii` | Checks if a character belongs to the ASCII character set. |
+| `ft_isprint` | Checks if a character is printable, including space.      |
+| `ft_toupper` | Converts a lowercase letter to uppercase.                 |
+| `ft_tolower` | Converts an uppercase letter to lowercase.                |
 
-* **String inspection & manipulation**:
-  * `ft_strlen`: Computes the length of a string.
-  * `ft_strlcpy`: Copies a string to a specific size buffer with guaranteed null-termination.
-  * `ft_strlcat`: Concatenates strings to a specific size buffer with guaranteed null-termination.
-  * `ft_strchr`: Locates the first occurrence of a character in a string.
-  * `ft_strrchr`: Locates the last occurrence of a character in a string.
-  * `ft_strncmp`: Compares two strings up to `n` bytes.
-  * `ft_strnstr`: Locates a substring within a string where no more than `len` characters are searched.
-  * `ft_strdup`: Allocates and duplicates a string.
+### String functions
 
-* **Memory management**:
-  * `ft_memset`: Fills a memory area with a constant byte.
-  * `ft_bzero`: Erases data in the memory area by writing zeros.
-  * `ft_memcpy`: Copies memory area between non-overlapping buffers.
-  * `ft_memmove`: Copies memory area safely handling overlapping regions.
-  * `ft_memchr`: Scans memory for a specific byte.
-  * `ft_memcmp`: Compares memory areas.
-  * `ft_calloc`: Allocates memory initialized to zero, ensuring valid unique pointers for 0-size allocations.
+| Function     | Description                                                                       |
+| ------------ | --------------------------------------------------------------------------------- |
+| `ft_strlen`  | Returns the length of a string.                                                   |
+| `ft_strlcpy` | Copies a string into a destination buffer with size control and null termination. |
+| `ft_strlcat` | Appends one string to another with size control and null termination.             |
+| `ft_strchr`  | Finds the first occurrence of a character in a string.                            |
+| `ft_strrchr` | Finds the last occurrence of a character in a string.                             |
+| `ft_strncmp` | Compares up to `n` characters of 2 strings.                                       |
+| `ft_strnstr` | Searches for a substring within a string up to a specified length.                |
+| `ft_strdup`  | Creates a newly allocated copy of a string.                                       |
 
-* **Conversion**:
-  * `ft_atoi`: Converts the initial portion of a string to an integer.
+### Memory functions
 
-### 2. Part 2
+| Function     | Description                                            |
+| ------------ | ------------------------------------------------------ |
+| `ft_memset`  | Fills a memory area with a specified byte.             |
+| `ft_bzero`   | Sets a memory area to zero.                            |
+| `ft_memcpy`  | Copies memory between 2 non-overlapping areas.         |
+| `ft_memmove` | Copies memory while safely handling overlapping areas. |
+| `ft_memchr`  | Searches a memory area for a specific byte.            |
+| `ft_memcmp`  | Compares 2 memory areas.                               |
+| `ft_calloc`  | Allocates memory and initializes it to zero.           |
 
-Utility functions either not included in the standard libc or implemented in an extended form:
+### Conversion
 
-* `ft_substr`: Extracts a substring from a string.
-* `ft_strjoin`: Concatenates two strings into a newly allocated string.
-* `ft_strtrim`: Trims characters specified in a set from the beginning and end of a string.
-* `ft_split`: Splits a string into an array of substrings using a delimiter character.
-* `ft_itoa`: Converts an integer into a null-terminated string.
-* `ft_strmapi`: Creates a new string by applying a function to each character with its index.
-* `ft_striteri`: Applies a function to each character of a string in-place by passing its address and index.
-* `ft_putchar_fd`: Writes a character to a specified file descriptor.
-* `ft_putstr_fd`: Writes a string to a specified file descriptor.
-* `ft_putendl_fd`: Writes a string followed by a newline to a specified file descriptor.
-* `ft_putnbr_fd`: Writes an integer to a specified file descriptor.
+| Function  | Description                                         |
+| --------- | --------------------------------------------------- |
+| `ft_atoi` | Converts the beginning of a string into an integer. |
 
-### 3. Part 3 - Linked List Functions
+The functions in Part 1 are implemented without relying on external functions.
 
-Functions designed to manipulate singly linked lists defined by the `t_list` structure:
+---
+
+### Part 2 - Additional Functions
+
+The second part contains functions that are not part of the required libc functions or provide functionality in a different form.
+
+### String manipulation
+
+| Function      | Description                                                                                |
+| ------------- | ------------------------------------------------------------------------------------------ |
+| `ft_substr`   | Creates a substring starting at a given index with a maximum length.                       |
+| `ft_strjoin`  | Creates a new string by joining 2 strings together.                                        |
+| `ft_strtrim`  | Removes characters from the beginning and end of a string based on a given set.            |
+| `ft_split`    | Splits a string into an array of strings using a delimiter character.                      |
+| `ft_strmapi`  | Creates a new string by applying a function to every character with its index.             |
+| `ft_striteri` | Applies a function to every character of a string and allows the character to be modified. |
+
+### Conversion
+
+| Function  | Description                                        |
+| --------- | -------------------------------------------------- |
+| `ft_itoa` | Converts an integer into a newly allocated string. |
+
+### File descriptor output
+
+| Function        | Description                                                 |
+| --------------- | ----------------------------------------------------------- |
+| `ft_putchar_fd` | Writes a character to a file descriptor.                    |
+| `ft_putstr_fd`  | Writes a string to a file descriptor.                       |
+| `ft_putendl_fd` | Writes a string followed by a newline to a file descriptor. |
+| `ft_putnbr_fd`  | Writes an integer to a file descriptor.                     |
+
+---
+
+### Part 3 - Linked Lists
+
+The third part adds functions for working with singly linked lists.
+
+The list uses the following structure:
 
 ```c
 typedef struct s_list
 {
-    void            *content;
-    struct s_list   *next;
-}   t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 ```
 
-* `ft_lstnew`: Allocates and initializes a new list node.
-* `ft_lstadd_front`: Adds a new element at the beginning of the list.
-* `ft_lstsize`: Counts the number of elements in the list.
-* `ft_lstlast`: Returns the last element of the list.
-* `ft_lstadd_back`: Adds a new element at the end of the list.
-* `ft_lstdelone`: Frees the memory of a single node using a custom delete function.
-* `ft_lstclear`: Deletes and frees an entire list and sets its head pointer to `NULL`.
-* `ft_lstiter`: Iterates through a list and applies a function to each node's content.
-* `ft_lstmap`: Iterates through a list, applies a function to create a new mapped list, and handles clean deallocation on failure.
+The `content` member stores the data of the node, while `next` points to the next node. A `void *` is used for `content` so that the list can store different types of data.
+
+| Function          | Description                                                                                      |
+| ----------------- | ------------------------------------------------------------------------------------------------ |
+| `ft_lstnew`       | Allocates and initializes a new list node.                                                       |
+| `ft_lstadd_front` | Adds a node to the beginning of a list.                                                          |
+| `ft_lstsize`      | Returns the number of nodes in a list.                                                           |
+| `ft_lstlast`      | Returns the last node of a list.                                                                 |
+| `ft_lstadd_back`  | Adds a node to the end of a list.                                                                |
+| `ft_lstdelone`    | Deletes one node and frees its content using a given function.                                   |
+| `ft_lstclear`     | Deletes and frees an entire list and sets its pointer to `NULL`.                                 |
+| `ft_lstiter`      | Applies a function to the content of every node.                                                 |
+| `ft_lstmap`       | Creates a new list by applying a function to every node and handles cleanup if allocation fails. |
 
 ---
 
@@ -93,47 +137,77 @@ typedef struct s_list
 
 ### Compilation
 
-To compile the library, run the following command in the root directory:
+The library can be compiled from the root of the repository with:
 
 ```bash
 make
 ```
 
-This compiles all source files with `cc` using the `-Wall -Wextra -Werror` flags and generates the static library archive `libft.a`.
+This creates the `libft.a` static library.
 
-### Makefile Rules
+The Makefile uses:
 
-* `make` or `make all`: Compiles the library `libft.a`.
-* `make bonus`: Compiles the library including list manipulation functions.
-* `make clean`: Removes all compiled object files (`.o`).
-* `make fclean`: Removes all compiled object files and the `libft.a` archive.
-* `make re`: Performs a full re-compilation (`fclean` followed by `all`).
+```text
+-Wall -Wextra -Werror
+```
 
-### Using Libft in Your Project
+and `cc` to compile the source files.
 
-To use the library in a C program:
+### Makefile rules
 
-1. Include the header file in your C source code:
-   ```c
-   #include "libft.h"
-   ```
+The Makefile provides the following rules:
 
-2. Compile your program linking the `libft.a` library:
-   ```bash
-   cc -Wall -Wextra -Werror main.c -L. -lft -o my_program
-   ```
+```bash
+make
+make all
+make clean
+make fclean
+make re
+```
+
+* `make` / `make all` - Builds `libft.a`.
+* `make clean` - Removes the object files.
+* `make fclean` - Removes the object files and `libft.a`.
+* `make re` - Runs `fclean` and then builds the library again.
+
+### Using Libft
+
+To use the library in another C project, include the header:
+
+```c
+#include "libft.h"
+```
+
+Then compile your program together with the library:
+
+```bash
+cc -Wall -Wextra -Werror main.c -L. -lft -o my_program
+```
 
 ---
 
 ## Resources
 
-### References
+### Documentation
+
 * Linux Programmer's Manual (`man 3 strlen`, `man 3 memcpy`, `man 3 calloc`, etc.)
-* [The C Programming Language (Second Edition) - Kernighan & Ritchie](https://en.wikipedia.org/wiki/The_C_Programming_Language)
-* Apple Open Source Libc / FreeBSD libc documentation for `strlcpy` and `strlcat`
+* [The C Programming Language - 2nd Edition](https://en.wikipedia.org/wiki/The_C_Programming_Language)
+* Apple Open Source / FreeBSD libc documentation for `strlcpy` and `strlcat`
+
+I also used the Libft subject provided by 42 as the reference for the required functions, prototypes, behavior, Makefile rules, and project requirements.
 
 ### AI Usage
-AI tools were consulted during the development and verification process for:
-* Analyzing edge cases and boundary conditions (e.g. `len == 0` in `ft_strnstr`, integer overflow on `INT_MIN` in `ft_atoi`, buffer sizing).
-* Verifying conformance with 42 Norminette standards.
-* Debugging function prototype signatures against the subject PDF specification (e.g., `ft_lstsize` returning `unsigned int`).
+
+AI tools were used as a support tool during development and verification, not as a replacement for understanding the project.
+
+I used AI mainly for:
+
+* Checking edge cases and boundary conditions.
+* Checking integer edge cases such as `INT_MIN` in `ft_atoi`.
+* Checking allocation and buffer-size calculations.
+* Checking function prototypes against the Libft subject.
+* Checking the linked list function signatures.
+* Helping identify bugs during development and testing.
+* Checking code against Norminette requirements.
+
+The implementation and final decisions were made while working through the functions and testing them myself.
