@@ -49,7 +49,7 @@ Standard functions reimplemented strictly adhering to their standard `man` speci
 * **Conversion**:
   * `ft_atoi`: Converts the initial portion of a string to an integer.
 
-### 2. Part 2 - Additional Functions
+### 2. Part 2
 
 Utility functions either not included in the standard libc or implemented in an extended form:
 
