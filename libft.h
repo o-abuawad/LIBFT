@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: zeru </var/spool/mail/zeru>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/30 15:37:40 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/30 15:37:58 by oabu-awa         ###   ########.fr       */
+/*   Created: 2026/10/05 01:03:56 by zeru              #+#    #+#             */
+/*   Updated: 2026/10/05 01:04:02 by zeru             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <string.h>
+# include <stdio.h>
 
 typedef struct s_list
 {

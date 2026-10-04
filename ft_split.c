@@ -6,7 +6,7 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 15:37:40 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/30 15:37:58 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/10/05 00:41:59 by zeru             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,13 +54,10 @@ static char	*word_dup(char const *s, size_t start, size_t end)
 
 static void	free_all(char **tab, size_t count)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < count)
+	while (count--)
 	{
-		free(tab[i]);
-		i++;
+		free(*tab);
+		(*tab)++;
 	}
 	free(tab);
 }

@@ -14,13 +14,10 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c < 127)
-		return (1);
-	else
-		return (0);
+	return (c >= 32 && c < 127);
 }
 // int main()
 // {
-// 	printf("%d\n%d\n", ft_isprint(31),isprint(31));
+// 	printf("%d\n", ft_isprint(29));
 //
 // }

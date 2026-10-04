@@ -33,6 +33,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 }
 // int main()
 // {
-// 	char dst[10] = "hel";
-// 	printf("%zu",ft_strlcpy(dst,"Hello 42", 0));
+// 	char dst[12] = "hel";
+// 	printf("%zu\n",ft_strlcpy(dst,"Hello42", 12));
+// 	printf("%zu\n",strlcpy(dst,"Hello42", 12));
 // }

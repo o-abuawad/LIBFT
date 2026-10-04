@@ -25,8 +25,6 @@ int	ft_atoi(const char *nptr)
 		i++;
 	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		if (nptr[i + 1] == '-' || nptr[i + 1] == '+')
-			return (0);
 		if (nptr[i] == '-')
 			sign = -1;
 		i++;
@@ -41,5 +39,5 @@ int	ft_atoi(const char *nptr)
 
 // int	main(void)
 // {
-// 	printf("%d\n%d\n", ft_atoi("+-123"), atoi("+-123"));
+// 	printf("%d\n%d\n", ft_atoi("	-12a3"), atoi("		-a123"));
 // }

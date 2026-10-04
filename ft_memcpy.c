@@ -30,16 +30,18 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (d);
 }
-
 // int main()
 // {
-// 	char dest[] = "yasdssdsaad";
-// 	char src[5] = "osan";
-// 	char *c;
-// 	char *r;
+// 	int src[6] = {1,511,3,4,5};
+// 	int dst[6] = {6,7,8,9,9};
+// 	int	*r;
+// 	int	i;
 //
-// 	c = memcpy(dest,src,6);
-// 	printf("%s\n", c);
-// 	r = ft_memcpy(dest,src,6);
-// 	printf("%s\n", r);
+// 	i = 0;
+// 	r = ft_memcpy(dst, src, 5);
+// 	while (i < 5)
+// 	{
+// 		printf("%d\n", r[i]);
+// 		i++;
+// 	}
 // }

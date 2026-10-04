@@ -25,10 +25,11 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+
 // int main()
 // {
 // 	char str[] = "osama";
-// 	// memset(123,3,3)
-// 	ft_memset(str, 'r', 3);
+// 	memset(str,'X',3);
+// 	// ft_memset(str, 'X', 3);
 // 	printf("%s\n", str);
 // }

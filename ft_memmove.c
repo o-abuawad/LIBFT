@@ -36,13 +36,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 // int main()
 // {
-// 	char dest[] = "yasdssdsaad";
-// 	char src[5] = "osan";
+// 	char src[6] = "12345";
 // 	char *c;
 // 	char *r;
 //
-// 	c = memmove(dest,src,3);
-// 	printf("%s\n", c);
-// 	r = ft_memmove(dest,src,3);
-// 	printf("%s\n", r);
+// 	r = ft_memmove(src + 1, src, 3);
+// 	c = memmove(src + 1, src, 3);
+// 	printf("%s\n%s\n", r, c);
 // }

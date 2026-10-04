@@ -22,11 +22,10 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return ((char *)s);
 }
-// #include <string.h>
-// #include <stdio.h>
+
 // int main()
 // {
-// 	char str[] = "Hello";
-// 	printf("%s\n", strchr(str,101));
-// 	printf("%s", ft_strchr(str,101));
+// 	char str[] = "Hello World";
+// 	printf("%s\n", strchr(str,'o'));
+// 	printf("%s\n", ft_strchr(str,'o'));
 // }

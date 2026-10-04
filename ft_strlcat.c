@@ -35,13 +35,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
-// #include <stdio.h>
+
 // int main()
 // {
-// 	char dst[20] = "Hell";
-// 	char *src = "World";
+// 	char dst[20] = "Hello";
+// 	char *src = "";
 // 	size_t c;
+// 	size_t r;
 //
-// 	c = ft_strlcat(dst,src, 12);
-// 	printf("%d", c);
+// 	c = ft_strlcat(dst,src, 5);
+// 	r = strlcat(dst,src, 5);
+// 	printf("%li\n%li", c, r);
 // }

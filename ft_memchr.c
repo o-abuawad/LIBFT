@@ -32,13 +32,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 // int	main(void)
 // {
-// 	char	*c;
-// 	char	*r;
 // 	char	src[] = "thisisjustatest";
+// 	char	*c;
 //
-// 	c = ft_memchr(src, 'j', 7);
-// 	r = memchr(src, 'j', 7);
-// 	printf("%s\n", r);
+// 	c = ft_memchr(src, 'j', 4);
 // 	printf("%s\n", c);
 // 	return (0);
 // }
