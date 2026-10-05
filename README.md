@@ -180,10 +180,6 @@ To use the library in another C project, include the header:
 
 Then compile your program together with the library:
 
-```bash
-cc -Wall -Wextra -Werror main.c -L. -lft -o my_program
-```
-
 ---
 
 ## Resources
@@ -192,7 +188,7 @@ cc -Wall -Wextra -Werror main.c -L. -lft -o my_program
 
 * Linux Programmer's Manual (`man 3 strlen`, `man 3 memcpy`, `man 3 calloc`, etc.)
 * [The C Programming Language - 2nd Edition](https://en.wikipedia.org/wiki/The_C_Programming_Language)
-* Apple Open Source / FreeBSD libc documentation for `strlcpy` and `strlcat`
+* FreeBSD libc documentation for `strlcpy` and `strlcat`
 
 I also used the Libft subject provided by 42 as the reference for the required functions, prototypes, behavior, Makefile rules, and project requirements.
 

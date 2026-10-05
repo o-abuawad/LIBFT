@@ -14,12 +14,9 @@
 
 int	ft_isalnum(int c)
 {
-	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
+	return ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122));
 }
 // int	main()
 // {
-// 	printf("%d\n%d\n", ft_isalnum('b'), isalnum('b'));
+// printf("%d\n", ft_isalnum(''));
 // }

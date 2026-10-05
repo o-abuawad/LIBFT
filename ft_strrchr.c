@@ -26,12 +26,12 @@ char	*ft_strrchr(const char *s, int c)
 	return ((char *) s + i);
 }
 
-int main()
-{
-	char str[] = "Hello World";
-	char	*c;
-	// printf("%s\n", ft_strrchr(str,'\0'));
-	c = strrchr(str, '\0');
-	c -= 2;
-	printf("%s", c);
-}
+// int main()
+// {
+// 	char str[] = "Hello World";
+// 	char	*c;
+// 	// printf("%s\n", ft_strrchr(str,'\0'));
+// 	c = strrchr(str, '\0');
+// 	c -= 2;
+// 	printf("%s", c);
+// }

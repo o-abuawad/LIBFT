@@ -60,10 +60,7 @@ char	*ft_itoa(int n)
 		return (NULL);
 	str[len] = '\0';
 	if (num == 0)
-	{
 		str[0] = '0';
-		return (str);
-	}
 	checker(str, len, num);
 	return (str);
 }

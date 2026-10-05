@@ -35,10 +35,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
- // int main()
- // {
- //     char s1[] = "ABCDEf";
- //     char s2[] = "ABCDEF";
- //     printf("%d\n", ft_strncmp(s1, s2,20));
- // }
+//#include <stdio.h>
+// int main()
+// {
+//     char s1[] = "ABCDEF";
+//     char s2[] = "AB2CDEF";
+//     printf("%d\n", ft_strncmp(s1, s2,20));
+// }
