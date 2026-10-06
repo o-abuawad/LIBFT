@@ -55,10 +55,7 @@ static char	*word_dup(char const *s, size_t start, size_t end)
 static void	free_all(char **tab, size_t count)
 {
 	while (count--)
-	{
-		free(*tab);
-		(*tab)++;
-	}
+		free(tab[count]);
 	free(tab);
 }
 

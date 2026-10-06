@@ -42,7 +42,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 // {
 // 	char *c;
 //
-// 	c = ft_strnstr("42amman", "42a", -2);
+// 	c = ft_strnstr("Foo Bar Baz", "Bcr", 7);
+// 	if (c == NULL)
+// 		return (0);
 // 	printf("%s\n", c);
 // 	return (0);
 // }
