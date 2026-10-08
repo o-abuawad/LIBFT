@@ -6,27 +6,29 @@
 /*   By: oabu-awa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 15:49:22 by oabu-awa          #+#    #+#             */
-/*   Updated: 2026/09/29 17:02:45 by oabu-awa         ###   ########.fr       */
+/*   Updated: 2026/10/07 18:31:57 by zeru             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static long	counter(long n)
+static long	counter(int n)
 {
 	long	i;
+	long	num;
 
 	i = 0;
-	if (n == 0)
+	num = n;
+	if (num == 0)
 		return (1);
-	if (n < 0)
+	if (num < 0)
 	{
 		i++;
-		n *= -1;
+		num = -num;
 	}
-	while (n > 0)
+	while (num > 0)
 	{
-		n /= 10;
+		num /= 10;
 		i++;
 	}
 	return (i);
@@ -55,7 +57,7 @@ char	*ft_itoa(int n)
 
 	len = counter(n);
 	num = n;
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	str = malloc(len + 1);
 	if (!str)
 		return (NULL);
 	str[len] = '\0';
@@ -69,6 +71,6 @@ char	*ft_itoa(int n)
 // {
 // 	char	*c;
 //
-// 	c = ft_itoa(-13214881);
+// 	c = ft_itoa(1234);
 // 	printf("%s\n", c);
 // }

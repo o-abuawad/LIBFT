@@ -32,7 +32,7 @@ void	*ft_calloc(size_t n, size_t size)
 //     int n = 14;
 //     int *arr;
 //
-// 	arr = (int *)ft_calloc(n, sizeof(int));
+// 	arr = ft_calloc(n, sizeof(int));
 //     if (arr == NULL) {
 //         printf("Memory allocation failed!\n");
 //         return 1;

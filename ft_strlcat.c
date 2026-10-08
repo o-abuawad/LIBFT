@@ -22,7 +22,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	src_len = 0;
 	while (dst_len < size && dst[dst_len])
 		dst_len++;
-	printf("Dest len: %ld\n", dst_len);
 	while (src[src_len])
 		src_len++;
 	if (dst_len == size)

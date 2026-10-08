@@ -29,13 +29,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 
-// #include <string.h>
 // int main()
 // {
 // 	int c;
 // 	int e;
 //
-// 	c = memcmp("osama","osamv",5);
-// 	e = ft_memcmp("osama","osamv",5);
+// 	c = memcmp("abc","abd",3);
+// 	e = ft_memcmp("abc","ab0",3);
 // 	printf("%d\n%d\n",c, e);
 // }
